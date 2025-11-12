@@ -84,7 +84,7 @@ Més informació: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://c
 
 ## Autor i crèdits
 
-**Autor:** Alex Martínez 
+**Autor:** Alex Martínez  
 **Universitat:** Universitat Oberta de Catalunya (UOC)  
 **Assignatura:** Treball Final de Grau  
 **Curs acadèmic:** 2025–2026
