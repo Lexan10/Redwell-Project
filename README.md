@@ -52,6 +52,7 @@ Per executar el projecte localment:
 
 ## Estructura de carpetes
 
+```
 ├── Assets/              # Recursos visuals (tilesets, personatges, UI)
 │   ├── Player/
 │   ├── Trees/
@@ -64,6 +65,7 @@ Per executar el projecte localment:
 ├── LICENSE.txt          # Llicència d’ús
 ├── README.md            # Aquest fitxer
 └── .gitignore           # Arxius a ignorar per git
+```
 
 ## Llicència
 
