@@ -52,7 +52,6 @@ Per executar el projecte localment:
 
 ## Estructura de carpetes
 
-```bash
 ├── Assets/              # Recursos visuals (tilesets, personatges, UI)
 │   ├── Player/
 │   ├── Trees/
