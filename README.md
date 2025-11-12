@@ -1,5 +1,5 @@
 # Redwell-Project
-A 2D videogame inspired in a Pokemon visuals but with some mystery in it.
+A 2D video game inspired by the visual style of classic Pokémon titles, with a narrative twist and a touch of mystery.
 
 ## License
 
