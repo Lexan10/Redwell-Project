@@ -42,7 +42,7 @@ Encara no hi ha versió executable (`.exe`). Les futures versions es publicaran 
 
 Per executar el projecte localment:
 
-1. Assegura’t de tenir instal·lat **Godot Engine 4.x**  
+1. Assegura’t de tenir instal·lat **Godot Engine 3.5**  
    (https://godotengine.org/download)
 2. Clona o descarrega aquest repositori.
 3. Obre el fitxer `project.godot` des de Godot.
