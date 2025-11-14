@@ -60,7 +60,9 @@ Per executar el projecte localment:
 │   └── ...
 ├── Player.gd            # Script del moviment del personatge
 ├── Player.tscn          # Escena del jugador
-├── Town.tscn            # Primera escena del joc
+├── Town.tscn            # Segona escena del joc
+├── Main_Menu.gd         # Script del menú
+├── Main_Menu.tscn       # Primera escena del joc
 ├── project.godot        # Fitxer principal de configuració Godot
 ├── LICENSE.txt          # Llicència d’ús
 ├── README.md            # Aquest fitxer
