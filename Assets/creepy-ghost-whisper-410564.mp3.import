@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/creepy-ghost-whisper-410564.mp3-395acd2bc300aee2bfff3b0a1f96c6cb.mp3str"
+
+[deps]
+
+source_file="res://Assets/creepy-ghost-whisper-410564.mp3"
+dest_files=[ "res://.import/creepy-ghost-whisper-410564.mp3-395acd2bc300aee2bfff3b0a1f96c6cb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
