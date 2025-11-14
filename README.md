@@ -46,7 +46,7 @@ Per executar el projecte localment:
    (https://godotengine.org/download)
 2. Clona o descarrega aquest repositori.
 3. Obre el fitxer `project.godot` des de Godot.
-4. Executa l’escena principal (`Town.tscn`) o la definida per defecte.
+4. Executa l’escena principal (`Main_Menu.tscn`) o la definida per defecte.
 
 ---
 
