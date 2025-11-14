@@ -10,7 +10,7 @@ L’objectiu del projecte és desenvolupar un petit món interactiu on el jugado
 - **Gènere:** Aventura narrativa amb exploració  
 - **Estil gràfic:** Pixel art retro  
 - **Perspectiva:** Top-down 2D  
-- **Motor de joc:** Godot Engine 4.x  
+- **Motor de joc:** Godot Engine 3.5  
 - **Plataforma prevista:** Windows/Linux
 
 L’objectiu és oferir una experiència immersiva i reflexiva a través d’un món pixelat, amb interaccions amb personatges, trencaclosques i un fil argumental profund.
