@@ -1,0 +1,157 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/bg_menu.png" type="Texture" id=1]
+[ext_resource path="res://Assets/runescape_uf.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Main_Menu.gd" type="Script" id=3]
+[ext_resource path="res://Assets/intro menu music.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Assets/creepy-ghost-whisper-410564.mp3" type="AudioStream" id=5]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1280, 720 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.815686, 0.815686, 0.815686, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color( 0.133333, 0.12549, 0.12549, 0.6 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.368627, 0.368627, 0.368627, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color( 0.133333, 0.12549, 0.12549, 0.6 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color( 0.133333, 0.12549, 0.12549, 0.6 )
+shadow_size = 2
+shadow_offset = Vector2( 0, 2 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Main_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -42.0
+margin_right = 52.0
+margin_bottom = 38.0
+custom_constants/separation = 11
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 10 )
+text = "Start game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 100.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 100.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.133
+anchor_right = 0.55
+anchor_bottom = 0.133
+margin_left = -64.0
+margin_top = -7.94
+margin_right = 48.0
+margin_bottom = 8.06
+custom_colors/font_color = Color( 1, 0.243137, 0.243137, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "REDWELL PROJECT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
