@@ -6,6 +6,7 @@ extends Control
 # var b = "text"
 onready var start_sound = $AudioStreamPlayer2
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_sound.connect("finished", self, "_on_start_sound_finished")
@@ -21,7 +22,8 @@ func _on_start_pressed():
 
 
 func _on_start_sound_finished():
-	get_tree().change_scene("res://Town.tscn")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Ruta1.tscn")
 
 func _on_options_pressed():
 	print("Options pressed")

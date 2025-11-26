@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var walk_speed = 10.0
+export var walk_speed = 12.0
 const TILE_SIZE = 16
 
 onready var anim_tree = $AnimationTree
@@ -78,7 +78,7 @@ func finished_turning():
 	player_state = PlayerState.IDLE
 
 func move(delta):
-	var desired_Step: Vector2 = input_direction * TILE_SIZE * 1.5
+	var desired_Step: Vector2 = input_direction * TILE_SIZE * 1.25
 	ray.cast_to = desired_Step
 	ray.force_raycast_update()
 	if !ray.is_colliding():
