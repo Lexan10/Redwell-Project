@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 43.9591, 39.7243 )
+
+[node name="House1" type="StaticBody2D"]
+position = Vector2( 0, -3.63798e-12 )
+scale = Vector2( 1.4559, 1.51041 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1.3549, 1.22956 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 1311.45, 1240.53, 73.0038, 112.709 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 43.9591, 60.9106 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
