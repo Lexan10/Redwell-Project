@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var walk_speed = 12.0
 const TILE_SIZE = 16
+class_name Player
 
 onready var anim_tree = $AnimationTree
 onready var anim_state = anim_tree.get("parameters/playback")
@@ -19,10 +20,52 @@ var is_moving = false
 var percent_moved_to_next_tile = 0.0
 
 
+func _apply_spawn():
+	if NavigationManager.spawn_door_tag == null or NavigationManager.spawn_door_tag == "":
+		return
+	
+	yield(get_tree(), "idle_frame")
+	
+	var door = get_tree().current_scene.find_node(NavigationManager.spawn_door_tag, true, false)
+	if door:
+		NavigationManager.trigger_player_spawn(door.spawn.global_position, door.spawn_direction)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim_tree.active = true
 	initial_position = position
+	NavigationManager.connect("on_trigger_player_spawn", self, "_on_spawn")
+	_apply_spawn()
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+	
+	var dir := Vector2.ZERO
+	
+	if direction == "left":
+		dir = Vector2(-1, 0)
+	elif direction == "right":
+		dir = Vector2(1, 0)
+	elif direction == "up":
+		dir = Vector2(0, -1)
+	elif direction == "down":
+		dir = Vector2(0, 1)
+	
+	anim_tree.set("parameters/Idle/blend_position", dir)
+	anim_tree.set("parameters/Walk/blend_position", dir)
+	anim_tree.set("parameters/Turn/blend_position", dir)
+	
+	if dir.x < 0:
+		facing_direction = FacingDirection.LEFT
+	elif dir.x > 0:
+		facing_direction = FacingDirection.RIGHT
+	elif dir.y < 0:
+		facing_direction = FacingDirection.UP
+	elif dir.y > 0:
+		facing_direction = FacingDirection.DOWN
+	
+	yield(get_tree(), "idle_frame")
+	anim_state.travel("Idle")
 	
 
 func _physics_process(delta):
@@ -78,7 +121,7 @@ func finished_turning():
 	player_state = PlayerState.IDLE
 
 func move(delta):
-	var desired_Step: Vector2 = input_direction * TILE_SIZE * 1.25
+	var desired_Step: Vector2 = input_direction * TILE_SIZE * 1.20
 	ray.cast_to = desired_Step
 	ray.force_raycast_update()
 	if !ray.is_colliding():

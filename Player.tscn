@@ -391,8 +391,14 @@ vframes = 4
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 16, 24 )
+position = Vector2( 16, 21.458 )
+scale = Vector2( 1.341, 1.097 )
 shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 16, 21.458 )
+scale = Vector2( 1, 1.128 )
+cast_to = Vector2( 0, 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/IdleDown = SubResource( 2 )
@@ -421,7 +427,3 @@ parameters/Walk/blend_position = Vector2( 0, 0 )
 position = Vector2( 16, 16 )
 current = true
 zoom = Vector2( 2, 2 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 16, 24 )
-cast_to = Vector2( 0, 30 )
