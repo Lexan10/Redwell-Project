@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Buildings/free_tileset_16x16_by_chaoticcherrycake_ddi8611.png" type="Texture" id=1]
+[ext_resource path="res://TileSets/tree.tres" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -10,7 +11,7 @@ extents = Vector2( 32, 32 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -32 )
 scale = Vector2( 1.93939, 2.05128 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 247.098, 152.488, 33.2392, 39.8091 )
