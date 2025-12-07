@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tilesets/grass1_tileset.png" type="Texture" id=2]
@@ -263,6 +263,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 5/shapes = [  ]
 5/z_index = 0
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=18]
+
 [node name="Town" type="Node2D"]
 modulate = Color( 0.729412, 0.729412, 0.729412, 1 )
 script = SubResource( 3 )
@@ -294,6 +296,9 @@ position = Vector2( 3.05176e-05, -16 )
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 656, -32 )
 collision_mask = 2
+
+[node name="AnimationTree" parent="YSort/Player" index="4"]
+parameters/playback = SubResource( 18 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 position = Vector2( 960, 16 )
@@ -1729,3 +1734,4 @@ position = Vector2( 656, -80 )
 collision_mask = 0
 
 [editable path="Doors/Door_4"]
+[editable path="YSort/Player"]

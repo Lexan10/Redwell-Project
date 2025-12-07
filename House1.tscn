@@ -18,5 +18,4 @@ region_rect = Rect2( 1311.45, 1240.53, 73.0038, 112.709 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 43.9591, 60.9106 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )

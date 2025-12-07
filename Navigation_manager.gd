@@ -3,6 +3,7 @@ extends Node
 const scene_ruta1 = preload("res://Ruta1.tscn")
 const scene_town = preload("res://Town.tscn")
 const scene_ruta2 = preload("res://Ruta2.tscn")
+const scene_insidehouse1 = preload("res://InsideHouse1.tscn")
 
 signal on_trigger_player_spawn
 
@@ -17,6 +18,8 @@ func go_to_level(level_tag, destination_tag):
 		scene_to_load = scene_town
 	elif level_tag == "ruta2":
 		scene_to_load = scene_ruta2
+	elif level_tag == "insidehouse1":
+		scene_to_load = scene_insidehouse1
 	
 	
 	if scene_to_load != null:

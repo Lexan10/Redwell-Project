@@ -34,6 +34,7 @@ func _apply_spawn():
 func _ready():
 	anim_tree.active = true
 	initial_position = position
+# warning-ignore:return_value_discarded
 	NavigationManager.connect("on_trigger_player_spawn", self, "_on_spawn")
 	_apply_spawn()
 	
