@@ -1,19 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSets/bfence.tres" type="Texture" id=1]
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/pack_farm_tileset_by_pano26_dedfln1.png-84a0c5cc53b69e91ded836d8a2989ec6.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 64, 24 )
+extents = Vector2( 74.6848, 24 )
 
 [node name="BFence" type="StaticBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 449.551, 407.568, 133.001, 54.3748 )
+region_rect = Rect2( 450.029, 407.647, 132.11, 54.7461 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 64, 27.405 )
+position = Vector2( 63, 27.405 )
 scale = Vector2( 1.031, 0.903 )
 shape = SubResource( 1 )

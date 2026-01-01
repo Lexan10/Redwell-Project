@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/pack_farm_tileset_by_pano26_dedfln1.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47, 56 )
+
+[node name="Silo" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -61 )
+scale = Vector2( 0.623188, 0.623188 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -0.090416, -0.0922394, 138.067, 306.477 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 43, 63 )
+shape = SubResource( 1 )

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/fancy_mansion_furnitureset_withshadow.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26.5, 34.5 )
+
+[node name="Butaca" type="StaticBody2D"]
+position = Vector2( -1, 37 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 10, -37 )
+scale = Vector2( 1.46667, 1.46667 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 6.86272, 47.1082, 20.1764, 15.55 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1, -19 )
+scale = Vector2( 1.65517, 1.65517 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 128.976, 31.8826, 29.9433, 31.7425 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 24.5, -0.5 )
+shape = SubResource( 1 )

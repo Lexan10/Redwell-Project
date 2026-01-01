@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Graveyard.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.5, 3.5 )
+
+[node name="RarePlant" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.984314, 0.956863, 0.647059, 1 )
+scale = Vector2( 0.782609, 0.782609 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 291.765, 450.14, 23.1779, 28.1135 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 9.5, 17.5 )
+shape = SubResource( 1 )

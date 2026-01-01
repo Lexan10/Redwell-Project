@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/classic_furnitureset_withshadow.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 43.5, 25.5 )
+
+[node name="DeskRoom" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -10 )
+scale = Vector2( 1.51667, 1.33333 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 198.098, 151.995, 52.0474, 39.0677 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 39.5, 19.5 )
+shape = SubResource( 1 )

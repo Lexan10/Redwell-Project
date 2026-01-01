@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Objects scary 2.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 80.5, 34 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14.5, 13.5 )
+
+[node name="2Ruin" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -42 )
+scale = Vector2( 1.96774, 1.96774 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 912.026, 49.0395, 78.9871, 62.2452 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 80.5, 44 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 80.5, 0.5 )
+shape = SubResource( 2 )

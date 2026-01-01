@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSets/pilar.tres" type="Texture" id=1]
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png-3c2d9e905f62aa87207e2c09aa47295d.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -9,7 +10,7 @@ extents = Vector2( 16, 16 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.06667, 1 )
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 864.92, 895.897, 30.2003, 64.0025 )

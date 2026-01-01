@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSets/car.tres" type="Texture" id=1]
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/vehicles_sprites.png-bec9e0e97ad9332539dcbe0910507965.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 40 )
@@ -10,7 +11,7 @@ extents = Vector2( 64, 40 )
 [node name="Car" type="Sprite" parent="."]
 position = Vector2( -3.41, 0 )
 scale = Vector2( 1.58025, 1.37931 )
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 290.435, 22.4909, 82.3574, 55.5744 )

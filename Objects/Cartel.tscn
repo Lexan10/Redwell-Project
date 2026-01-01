@@ -1,17 +1,19 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://TileSets/cartel.tres" type="Texture" id=1]
-[ext_resource path="res://TileSets/planta2cartel.tres" type="Texture" id=2]
+[ext_resource path="res://TileSets/fondocartel.tres" type="Texture" id=1]
 [ext_resource path="res://Objects/Cartel.gd" type="Script" id=3]
 [ext_resource path="res://Assets/runescape_uf.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://TileSets/sombracartel.tres" type="Texture" id=5]
-[ext_resource path="res://TileSets/planta1cartel.tres" type="Texture" id=6]
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/free_tileset_16x16_by_chaoticcherrycake_ddi8611.png-3bca961620ddff758dabbfbf0380b938.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 15.3665 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 15
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -24,20 +26,20 @@ script = ExtResource( 3 )
 [node name="sombra" type="Sprite" parent="."]
 position = Vector2( 15.738, 31.745 )
 scale = Vector2( 2.084, 1.214 )
-texture = ExtResource( 5 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1807.95, 357.521, 15.9427, 10.795 )
 
 [node name="planta2" type="Sprite" parent="."]
 position = Vector2( 20.735, 26.426 )
 scale = Vector2( 1, 1.05686 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 311.911, 374.148, 7.58221, 5.65982 )
 
 [node name="Cartell" type="Sprite" parent="."]
 scale = Vector2( 2, 2 )
-texture = ExtResource( 1 )
+texture = SubResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96.4049, 640.067, 16.1931, 16.455 )
@@ -45,7 +47,7 @@ region_rect = Rect2( 96.4049, 640.067, 16.1931, 16.455 )
 [node name="planta1" type="Sprite" parent="."]
 position = Vector2( 10.714, 27.826 )
 scale = Vector2( 1, 1.05686 )
-texture = ExtResource( 6 )
+texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 311.911, 374.148, 7.58221, 5.65982 )
 
@@ -58,6 +60,7 @@ shape = SubResource( 1 )
 
 [node name="Label" type="Label" parent="Text"]
 visible = false
+modulate = Color( 0.733333, 0.733333, 0.733333, 1 )
 margin_left = -23.0
 margin_top = -24.0
 margin_right = 61.0

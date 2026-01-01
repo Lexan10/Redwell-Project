@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/post apoc toxic wasteland set updated.png" type="Texture" id=1]
+[ext_resource path="res://TileSets/fondocartel.tres" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5, 10.5 )
+
+[node name="GarbageBag" type="StaticBody2D"]
+
+[node name="sombra" type="Sprite" parent="."]
+position = Vector2( 11.8, 25.465 )
+scale = Vector2( 1.6, 1.307 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 1807.95, 357.521, 15.9427, 10.795 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 36.0995, 32.7305, 23.0037, 29.3008 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 11.5, 17.5 )
+shape = SubResource( 1 )

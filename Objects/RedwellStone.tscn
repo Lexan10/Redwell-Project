@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Buildings/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png" type="Texture" id=1]
+[ext_resource path="res://Assets/warning.png" type="Texture" id=2]
+[ext_resource path="res://Objects/RedwellStone.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 43.5, 21 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31, 16.5 )
+
+[node name="RedwellStone" type="StaticBody2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -28 )
+scale = Vector2( 2.7037, 2.7037 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 450.251, 595.08, 27.184, 27.4417 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 36.5, 23 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 37, 26 )
+shape = SubResource( 2 )
+
+[node name="Warning" type="Sprite" parent="."]
+visible = false
+position = Vector2( 36, -41 )
+scale = Vector2( 0.0390625, 0.0415039 )
+texture = ExtResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

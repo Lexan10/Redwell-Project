@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSets/scarecrow.tres" type="Texture" id=1]
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/pack_farm_tileset_by_pano26_dedfln1.png-84a0c5cc53b69e91ded836d8a2989ec6.stex"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.7287, 19.437 )
@@ -11,13 +12,14 @@ scale = Vector2( 1.4559, 1.51041 )
 z_as_relative = false
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.646457, 0.569524 )
-texture = ExtResource( 1 )
+position = Vector2( 0, -13.9035 )
+scale = Vector2( 0.56565, 0.519691 )
+texture = SubResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 119.877, 313.677, 68.2426, 93.9719 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 21.9795, 31.7794 )
+position = Vector2( 18.5452, 13.9035 )
 scale = Vector2( 1.419, 0.921 )
 shape = SubResource( 1 )

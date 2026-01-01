@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Buildings/free_tileset_16x16_by_chaoticcherrycake_ddi8611.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19.5, 42 )
+
+[node name="LeftBench" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+scale = Vector2( 2, 2.52754 )
+texture = ExtResource( 1 )
+centered = false
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 49.8102, 641.068, 13.2368, 30.0718 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 12.5, 22 )
+shape = SubResource( 1 )
