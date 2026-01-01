@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/__peds10_mv_by_skatefilter5_da9rhey.png-2090911f290e3ac29cd3717b2a6b01ee.stex"
+path="res://.import/cientific pj.png-19c9681a00c53af48b577624ef3980a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/__peds10_mv_by_skatefilter5_da9rhey.png"
-dest_files=[ "res://.import/__peds10_mv_by_skatefilter5_da9rhey.png-2090911f290e3ac29cd3717b2a6b01ee.stex" ]
+source_file="res://Assets/Player/cientific pj.png"
+dest_files=[ "res://.import/cientific pj.png-19c9681a00c53af48b577624ef3980a9.stex" ]
 
 [params]
 

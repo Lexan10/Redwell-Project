@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/__peds10_mv_by_skatefilter5_da9rhey.png-2090911f290e3ac29cd3717b2a6b01ee.stex"
+path="res://.import/villain pj MALE.png-a94c6e9515593881af203328fe37b49f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/__peds10_mv_by_skatefilter5_da9rhey.png"
-dest_files=[ "res://.import/__peds10_mv_by_skatefilter5_da9rhey.png-2090911f290e3ac29cd3717b2a6b01ee.stex" ]
+source_file="res://Assets/Player/villain pj MALE.png"
+dest_files=[ "res://.import/villain pj MALE.png-a94c6e9515593881af203328fe37b49f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
