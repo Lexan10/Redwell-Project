@@ -35,6 +35,8 @@ Aquest projecte no pretén ser un joc complet, sinó una **prova de concepte** a
 Versió **GOLD MASTER** (Demo final)
 El projecte es considera complet dins l'abast definit per al Treball Final de Grau
 
+---
+
 ## Com provar el projecte
 
 - Ves a l’apartat Releases del repositori.
