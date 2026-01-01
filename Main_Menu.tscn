@@ -1,10 +1,41 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/bg_menu.png" type="Texture" id=1]
 [ext_resource path="res://Assets/runescape_uf.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Main_Menu.gd" type="Script" id=3]
 [ext_resource path="res://Assets/intro menu music.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Assets/creepy-ghost-whisper-410564.mp3" type="AudioStream" id=5]
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends Control
+
+onready var start_sound = $AudioStreamPlayer2
+
+func _ready():
+	start_sound.connect(\"finished\", self, \"_on_start_sound_finished\")
+	BgMusic.stop()
+
+func _on_start_pressed():
+	start_sound.play()
+
+func _on_start_sound_finished():
+	BgMusic.play()
+	TransitionScreen.transition()
+	yield(TransitionScreen, \"on_transition_finished\")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene(\"res://IntroNegre.tscn\")
+
+func _on_options_pressed():
+	if $Timer.is_stopped():
+		$NoOptions.visible = true
+		$Timer.start()
+
+func _on_Timer_timeout():
+	$NoOptions.visible = false
+
+func _on_exit_pressed():
+	get_tree().quit()
+
+"
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 1 )
@@ -57,10 +88,18 @@ font_data = ExtResource( 2 )
 size = 20
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 14
+outline_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+font_data = ExtResource( 2 )
+
 [node name="Main_Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = SubResource( 13 )
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -93,7 +132,7 @@ custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 11 )
 custom_styles/normal = SubResource( 10 )
-text = "Start game"
+text = "Iniciar"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 30.0
@@ -110,7 +149,7 @@ custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/normal = SubResource( 10 )
-text = "Options"
+text = "Opcions"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 margin_top = 60.0
@@ -127,7 +166,7 @@ custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/normal = SubResource( 10 )
-text = "Exit"
+text = "Sortir"
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -142,6 +181,20 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "REDWELL PROJECT"
 
+[node name="NoOptions" type="Label" parent="."]
+visible = false
+margin_left = 52.0
+margin_top = 10.0
+margin_right = 270.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 14 )
+text = "Opcions no disponibles a la demo"
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -20.0
@@ -151,6 +204,26 @@ autoplay = true
 stream = ExtResource( 5 )
 volume_db = -15.0
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 166.0
+margin_right = 133.0
+margin_bottom = 181.0
+custom_colors/font_color = Color( 0.454902, 0.454902, 0.454902, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Creat per Alex Martinez"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 225.0
+margin_top = 166.0
+margin_right = 316.0
+margin_bottom = 182.0
+custom_colors/font_color = Color( 0.454902, 0.454902, 0.454902, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "UOC - Gener 2026"
+align = 2
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -13,12 +13,11 @@ enum FacingDirection { LEFT, RIGHT, UP, DOWN }
 
 var player_state = PlayerState.IDLE
 var facing_direction = FacingDirection.DOWN
-
+var can_move := true
 var initial_position = Vector2(0, 0)
 var input_direction = Vector2(0, 0)
 var is_moving = false
 var percent_moved_to_next_tile = 0.0
-
 
 func _apply_spawn():
 	if NavigationManager.spawn_door_tag == null or NavigationManager.spawn_door_tag == "":
@@ -70,6 +69,13 @@ func _on_spawn(position: Vector2, direction: String):
 	
 
 func _physics_process(delta):
+	if not can_move:
+		input_direction = Vector2.ZERO
+		is_moving = false
+		percent_moved_to_next_tile = 0.0
+		player_state = PlayerState.IDLE
+		anim_state.travel("Idle")
+		return
 	if player_state == PlayerState.TURNING:
 		return
 	elif is_moving == false:
@@ -80,7 +86,7 @@ func _physics_process(delta):
 	else:
 		anim_state.travel("Idle")
 		is_moving = false
-		
+
 func process_player_movement_input():
 	if input_direction.y == 0:
 		input_direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))

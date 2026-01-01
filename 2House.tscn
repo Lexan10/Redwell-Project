@@ -1,23 +1,22 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Buildings/free_tileset_16x16_by_chaoticcherrycake_ddi8611.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Buildings/churchfinal.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 54.6054, 32.7726 )
+extents = Vector2( 82.7667, 40.3864 )
 
 [node name="House1" type="StaticBody2D"]
 position = Vector2( 0, -3.63798e-12 )
 scale = Vector2( 1.4559, 1.51041 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.68686, -19.8622 )
-scale = Vector2( 1.3549, 1.22956 )
+position = Vector2( 0.68686, -35.0898 )
+scale = Vector2( 0.198048, 0.179727 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 2.88397, 527.724, 77.4228, 99.1385 )
+region_rect = Rect2( 545, 66, 881, 862.864 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 49.1105, 43.3657 )
-scale = Vector2( 1, 1 )
+position = Vector2( 83.4535, 33.1036 )
 shape = SubResource( 1 )

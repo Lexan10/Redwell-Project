@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Assets/Player/HUNTER_mask.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -379,7 +379,10 @@ graph_offset = Vector2( -82, 29 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=24]
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 18.5, 22.5 )
+
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -427,3 +430,10 @@ parameters/Walk/blend_position = Vector2( 0, 0 )
 position = Vector2( 16, 16 )
 current = true
 zoom = Vector2( 2, 2 )
+
+[node name="AreaDetector" type="Area2D" parent="."]
+position = Vector2( 16, 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDetector"]
+scale = Vector2( 1.391, 1.397 )
+shape = SubResource( 38 )

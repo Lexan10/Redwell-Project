@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Buildings/free_tileset_16x16_by_chaoticcherrycake_ddi8611.png" type="Texture" id=2]
@@ -6,31 +6,16 @@
 [ext_resource path="res://Assets/Buildings/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Water/WaterTexture.tres" type="Texture" id=5]
 [ext_resource path="res://Assets/Buildings/public_indoor_tileset_from_public_tiles_by_chaoticcherrycake_d801ty3.png" type="Texture" id=6]
-[ext_resource path="res://dialogues/dialogue_npc1_house1.tres" type="Resource" id=7]
 [ext_resource path="res://Assets/close-door-382723.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Assets/Buildings/classic_furnitureset_withshadow.png" type="Texture" id=9]
 [ext_resource path="res://Objects/HouseWall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/BaseBoardWall.tscn" type="PackedScene" id=11]
 [ext_resource path="res://BGGameMusic.tscn" type="PackedScene" id=12]
-[ext_resource path="res://InsideHouse1.gd" type="Script" id=13]
 [ext_resource path="res://HouseMusic.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Objects/Clock.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objects/Bed.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objects/SmallCloset.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Objects/Closet.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Objects/NPC3.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Objects/NPC5.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Objects/NPC4.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Objects/NPC.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Door_Exit.tscn" type="PackedScene" id=23]
-[ext_resource path="res://dialogues/dialogue_npc3_house1.tres" type="Resource" id=24]
-[ext_resource path="res://dialogues/dialogue_npc4_house1.tres" type="Resource" id=25]
-[ext_resource path="res://dialogues/dialogue_npc5_house1.tres" type="Resource" id=26]
-[ext_resource path="res://ClockMinigame.tscn" type="PackedScene" id=27]
-[ext_resource path="res://Objects/Informe.tscn" type="PackedScene" id=28]
-[ext_resource path="res://Objects/NoteUI.tscn" type="PackedScene" id=29]
-[ext_resource path="res://dialogues/dlg_note_putaway.tres" type="Resource" id=30]
-[ext_resource path="res://dialogues/dlg_note_pickup.tres" type="Resource" id=31]
 [ext_resource path="res://Objects/Chair1.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Objects/World.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Objects/Plant.tscn" type="PackedScene" id=34]
@@ -329,12 +314,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 8/shapes = [  ]
 8/z_index = 0
 
-[node name="InsideHouse1" type="Node2D"]
+[node name="InsideHouse3" type="Node2D"]
 modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
-script = ExtResource( 13 )
-
-[node name="ClockMinigame" parent="." instance=ExtResource( 27 )]
-visible = false
 
 [node name="BlackBG" type="ColorRect" parent="."]
 margin_left = -1023.0
@@ -351,7 +332,7 @@ format = 1
 tile_data = PoolIntArray( -327693, 8, 0, -327692, 8, 0, -327691, 8, 0, -327690, 8, 0, -327689, 8, 0, -327688, 8, 0, -327687, 8, 0, -327686, 8, 0, -327685, 8, 0, -327684, 8, 0, -327683, 8, 0, -327682, 8, 0, -327681, 8, 0, -393216, 8, 0, -393215, 8, 0, -393214, 8, 0, -393213, 8, 0, -393212, 8, 0, -393211, 8, 0, -393210, 8, 0, -393209, 8, 0, -393208, 8, 0, -393207, 8, 0, -393206, 8, 0, -393205, 8, 0, -393204, 8, 0, -393203, 8, 0, -196621, 8, 0, -196619, 8, 0, -196617, 8, 0, -196615, 8, 0, -196613, 8, 0, -196611, 8, 0, -196609, 8, 0, -262143, 8, 0, -262141, 8, 0, -262139, 8, 0, -262137, 8, 0, -262135, 8, 0, -262133, 8, 0, -262131, 8, 0, -65549, 8, 0, -65547, 8, 0, -65545, 8, 0, -65543, 8, 0, -65541, 8, 0, -65539, 8, 0, -65537, 8, 0, -131071, 8, 0, -131069, 8, 0, -131067, 8, 0, -131065, 8, 0, -131063, 8, 0, -131061, 8, 0, -131059, 8, 0, 65523, 8, 0, 65525, 8, 0, 65527, 8, 0, 65529, 8, 0, 65531, 8, 0, 65533, 8, 0, 65535, 8, 0, 1, 8, 0, 3, 8, 0, 5, 8, 0, 7, 8, 0, 9, 8, 0, 11, 8, 0, 13, 8, 0, 196595, 8, 0, 196597, 8, 0, 196599, 8, 0, 196601, 8, 0, 196603, 8, 0, 196605, 8, 0, 196607, 8, 0, 131073, 8, 0, 131075, 8, 0, 131077, 8, 0, 131079, 8, 0, 131081, 8, 0, 131083, 8, 0, 131085, 8, 0, 327667, 8, 0, 327669, 8, 0, 327671, 8, 0, 327673, 8, 0, 327675, 8, 0, 327677, 8, 0, 327679, 8, 0, 262145, 8, 0, 262147, 8, 0, 262149, 8, 0, 262151, 8, 0, 262153, 8, 0, 262155, 8, 0, 262157, 8, 0, 458739, 8, 0, 458741, 8, 0, 458743, 8, 0, 458745, 8, 0, 458747, 8, 0, 458749, 8, 0, 458751, 8, 0, 393217, 8, 0, 393219, 8, 0, 393221, 8, 0, 393223, 8, 0, 393225, 8, 0, 393226, 8, 0, 393227, 8, 0, 393229, 8, 0, 589811, 8, 0, 589813, 8, 0, 589815, 8, 0, 589817, 8, 0, 589819, 8, 0, 589821, 8, 0, 589823, 8, 0, 524289, 8, 0, 524291, 8, 0, 524293, 8, 0, 524295, 8, 0, 524297, 8, 0, 524299, 8, 0, 524301, 8, 0, 720883, 8, 0, 720885, 8, 0, 720887, 8, 0, 720889, 8, 0, 720891, 8, 0, 720893, 8, 0, 720895, 8, 0, 655361, 8, 0, 655363, 8, 0, 655365, 8, 0, 655367, 8, 0, 655369, 8, 0, 655371, 8, 0, 655373, 8, 0 )
 
 [node name="Carpet" type="Sprite" parent="."]
-position = Vector2( -171, -70 )
+position = Vector2( -160, -14 )
 scale = Vector2( 1.30645, 1.30645 )
 texture = ExtResource( 37 )
 centered = false
@@ -475,24 +456,8 @@ region_rect = Rect2( 16.7904, 256.847, 46.3929, 30.4574 )
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Informe" parent="YSort" instance=ExtResource( 28 )]
-position = Vector2( -36, -79 )
-note_ui_scene = ExtResource( 29 )
-dialogue_pickup = ExtResource( 31 )
-pickup_start = "dlg_note_pickup"
-dialogue_putaway = ExtResource( 30 )
-putaway_start = "dlg_note_putaway"
-
-[node name="Clock" parent="YSort" instance=ExtResource( 15 )]
-position = Vector2( -10, -176 )
-minigame_path = NodePath("../../ClockMinigame")
-informe_path = NodePath("../Informe")
-
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 1, 32 )
-
-[node name="Bed" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( -207, -122 )
 
 [node name="Bed2" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( -207, -12 )
@@ -504,30 +469,13 @@ position = Vector2( -208, -66 )
 position = Vector2( -207, 43 )
 
 [node name="Closet" parent="YSort" instance=ExtResource( 18 )]
-position = Vector2( -87, -139 )
+position = Vector2( -206, -141 )
 
-[node name="NPC" parent="YSort" instance=ExtResource( 22 )]
-position = Vector2( 70, 131 )
-dialogue_resource = ExtResource( 7 )
-dialogue_start_node = "textnpc1house1"
-
-[node name="NPC3" parent="YSort" instance=ExtResource( 19 )]
-position = Vector2( 190, -127 )
-dialogue_resource = ExtResource( 24 )
-dialogue_start_node = "textnpc3house1"
-
-[node name="NPC4" parent="YSort" instance=ExtResource( 21 )]
-position = Vector2( 134, -125 )
-dialogue_resource = ExtResource( 25 )
-dialogue_start_node = "textnpc4house1"
-
-[node name="NPC5" parent="YSort" instance=ExtResource( 20 )]
-position = Vector2( 76.317, -126 )
-dialogue_resource = ExtResource( 26 )
-dialogue_start_node = "textnpc5house1"
+[node name="Closet2" parent="YSort" instance=ExtResource( 18 )]
+position = Vector2( -31, -144 )
 
 [node name="Chair1" parent="YSort" instance=ExtResource( 32 )]
-position = Vector2( 140, -110 )
+position = Vector2( -156, -111 )
 
 [node name="Chair3" parent="YSort" instance=ExtResource( 32 )]
 position = Vector2( 98, -35 )
@@ -535,8 +483,8 @@ position = Vector2( 98, -35 )
 [node name="Chair2" parent="YSort" instance=ExtResource( 32 )]
 position = Vector2( -115, 116 )
 
-[node name="World" parent="YSort" instance=ExtResource( 33 )]
-position = Vector2( 76.317, -107 )
+[node name="World2" parent="YSort" instance=ExtResource( 33 )]
+position = Vector2( -88, -112 )
 
 [node name="Plant" parent="YSort" instance=ExtResource( 34 )]
 position = Vector2( 190, -111 )
@@ -568,20 +516,16 @@ position = Vector2( 196, -3 )
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_Exit" parent="Doors" instance=ExtResource( 23 )]
-position = Vector2( 14, 207 )
+position = Vector2( 11, 196 )
 destination_level_tag = "town"
-destination_door_tag = "Door_House"
+destination_door_tag = "Door_NHouse3"
 spawn_direction = "up"
 
 [node name="Spawn" parent="Doors/Door_Exit" index="0"]
-position = Vector2( -13, -89 )
-
-[node name="CollisionShape2D2" parent="Doors/Door_Exit" index="1"]
-position = Vector2( -3, -13 )
+position = Vector2( -17, -56 )
 
 [node name="Warning" parent="Doors/Door_Exit" index="2"]
-position = Vector2( -3, -37 )
-scale = Vector2( 0.0585938, 0.0622558 )
+position = Vector2( -1, -17 )
 
 [node name="DoorClose" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
@@ -594,5 +538,4 @@ autoplay = true
 [node name="BgMusic" parent="." instance=ExtResource( 12 )]
 volume_db = -26.281
 
-[editable path="ClockMinigame"]
 [editable path="Doors/Door_Exit"]
