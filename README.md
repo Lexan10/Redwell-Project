@@ -1,7 +1,7 @@
 # Redwell-Project
 
-**Redwell** és un videojoc 2D inspirat en l’estil visual dels títols clàssics de *Pokémon*, amb una narrativa pròpia i un toc de misteri.  
-L’objectiu del projecte és desenvolupar un petit món interactiu on el jugador pugui explorar, interactuar i resoldre petits trencaclosques mentre descobreix la història.
+**Project Redwell** és una **demo jugable d’un videojoc 2D d’exploració i misteri**, desenvolupada com a **Treball Final de Grau**.
+El projecte combina narrativa ambiental, exploració i petits enigmes dins d’un món pixel art inspirat en l’estètica clàssica, amb una atmosfera fosca i inquietant.
 
 ---
 
@@ -11,42 +11,70 @@ L’objectiu del projecte és desenvolupar un petit món interactiu on el jugado
 - **Estil gràfic:** Pixel art retro  
 - **Perspectiva:** Top-down 2D  
 - **Motor de joc:** Godot Engine 3.5  
-- **Plataforma prevista:** Windows/Linux
+- **Plataforma prevista:** Windows (demo executable)
 
-L’objectiu és oferir una experiència immersiva i reflexiva a través d’un món pixelat, amb interaccions amb personatges, trencaclosques i un fil argumental profund.
+El jugador controla un antic inspector que arriba a un poble aparentment abandonat. A través de l’exploració, la interacció amb l’entorn i els personatges, i la resolució de petits trencaclosques, es va revelant una història fragmentada marcada pel misteri.
 
 ---
 
 ## Objectius del projecte
 
-- Explorar eines lliures com **Godot** per al desenvolupament de videojocs.  
-- Treballar l’estètica i la narrativa pròpia dins d’un entorn interactiu.  
-- Crear una estructura **modular, escalable** i amb bona gestió de recursos.  
-- Experimentar amb mecàniques de resolució de trencaclosques i narrativa emergent.
+L’objectiu del treball és desenvolupar una **demo funcional i coherent** que demostri:
+
+- Disseny d’un món interactiu amb narrativa ambiental
+- Implementació de sistemes bàsics de videojoc (moviment, col·lisions, diàlegs, transicions, enigmes)
+- Gestió d’estats narratius i progressió del jugador
+- Avaluació del joc mitjançant proves amb usuaris (beta testers)
+
+Aquest projecte no pretén ser un joc complet, sinó una **prova de concepte** amb potencial d’expansió.
 
 ---
 
-## Estat del desenvolupament
+## Estat del projecte
 
-Actualment el joc es troba en fase inicial. Ja es pot:
-
-- Observar l’entorn gràfic implementat  
-- Moure el personatge principal  
-- Testar el sistema bàsic de moviment i col·lisió
-
-Encara no hi ha versió executable (`.exe`). Les futures versions es publicaran com a *releases* d’aquest repositori.
-
----
+Versió **GOLD MASTER** (Demo final)
+El projecte es considera complet dins l'abast definit per al Treball Final de Grau
 
 ## Com provar el projecte
 
-Per executar el projecte localment:
+- Ves a l’apartat Releases del repositori.
+- Descarrega l’arxiu .zip de l’última versió.
+- Descomprimeix la carpeta.
+- Executa RedwellProject.exe.
 
-1. Assegura’t de tenir instal·lat **Godot Engine 3.5**  
-   (https://godotengine.org/download)
-2. Clona o descarrega aquest repositori.
-3. Obre el fitxer `project.godot` des de Godot.
-4. Executa l’escena principal (`Main_Menu.tscn`) o la definida per defecte.
+No cal instal·lació.
+
+---
+
+## Controls bàsics
+
+- Fletxes / WASD - Moure el personatge
+- E / tecla d'interacció - Interactuar amb NPCs i objectes
+- ESC - Pausa / menú
+
+---
+
+## Contingut de la demo
+
+La demo es considera completada quan el jugador:
+
+- Explora totes les zones accessibles
+- Parla amb tots els NPCs
+- Entra a totes les cases
+- Interactua amb els elements clau
+- Resol l’enigma principal
+
+---
+
+## Avaluació amb usuaris
+
+El projecte ha estat provat per beta testers, mitjançant qüestionaris estructurats que han permès recollir:
+
+- Valoracions quantitatives (escala 1–5)
+- Feedback qualitatiu
+- Detecció de bugs i àrees de millora
+
+Els resultats d’aquesta avaluació s’inclouen i s’analitzen a la memòria del Treball Final de Grau.
 
 ---
 
