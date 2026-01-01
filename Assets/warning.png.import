@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png-6ee033666ba141b4fb41de28a285d1c4.stex"
+path="res://.import/warning.png-2e279835ae3d5b6b55427c5b5200efdd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png"
-dest_files=[ "res://.import/pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y.png-6ee033666ba141b4fb41de28a285d1c4.stex" ]
+source_file="res://Assets/warning.png"
+dest_files=[ "res://.import/warning.png-2e279835ae3d5b6b55427c5b5200efdd.stex" ]
 
 [params]
 
