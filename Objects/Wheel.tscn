@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TileSets/fondocartel.tres" type="Texture" id=1]
+[ext_resource path="res://Assets/post apoc toxic wasteland set updated.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 16.0
+height = 13.0
+
+[node name="DWheel" type="StaticBody2D"]
+
+[node name="sombra" type="Sprite" parent="."]
+position = Vector2( 12.8, 17 )
+scale = Vector2( 1.6, 1.214 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1807.95, 357.521, 15.9427, 10.795 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 226.928, 133.803, 25.3519, 21.333 )
+
+[node name="planta1" type="Sprite" parent="."]
+position = Vector2( 3, 16 )
+scale = Vector2( 1, 1.05686 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 311.911, 374.148, 7.58221, 5.65982 )
+
+[node name="planta2" type="Sprite" parent="."]
+position = Vector2( 14, 19 )
+scale = Vector2( 1, 1.05686 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 311.911, 374.148, 7.58221, 5.65982 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 12.5, 11 )
+rotation = 1.5708
+shape = SubResource( 1 )
