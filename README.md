@@ -99,6 +99,8 @@ Els resultats d’aquesta avaluació s’inclouen i s’analitzen a la memòria 
 └── .gitignore           # Arxius a ignorar per git
 ```
 
+---
+
 ## Llicència
 
 Aquest projecte està llicenciat sota **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
@@ -113,6 +115,8 @@ Sota les condicions següents:
 - **CompartirIgual** — Si modifiques el material, has de distribuir-lo amb la mateixa llicència que l’original.
 
 Més informació: [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+---
 
 ## Autor i crèdits
 
