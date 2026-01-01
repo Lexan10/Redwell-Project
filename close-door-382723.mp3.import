@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/close-door-382723.mp3-863fa93b038cfce4a8743accc183dbca.mp3str"
+
+[deps]
+
+source_file="res://Assets/close-door-382723.mp3"
+dest_files=[ "res://.import/close-door-382723.mp3-863fa93b038cfce4a8743accc183dbca.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
