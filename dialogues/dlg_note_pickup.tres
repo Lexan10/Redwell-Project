@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 2
+syntax_version = 2
+raw_text = "~ dlg_note_pickup
+En Hunter agafa el paper Informe sobre mutacions 1.
+=> END
+"
+errors = [  ]
+titles = {
+"dlg_note_pickup": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "dlg_note_pickup",
+"type": "title"
+},
+"1": {
+"character": "",
+"next_id": "2",
+"replacements": [  ],
+"text": "En Hunter agafa el paper Informe sobre mutacions 1.",
+"translation_key": "En Hunter agafa el paper Informe sobre mutacions 1.",
+"type": "dialogue"
+},
+"2": {
+"next_id": "end",
+"type": "goto"
+}
+}

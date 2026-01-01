@@ -1,0 +1,10 @@
+<<if not DialogueAutoload.has_met_npc>>
+Axel: Hola! Benvingut a RedWell. Per començar, et pots moure amb les fletxes del teclat. I per interactuar amb objectes, has de pressionar la E. Endavant!
+
+<<set DialogueAutoload.has_met_npc = true>>
+
+<<elif DialogueAutoload.has_met_npc = true>>
+Axel: Segueix el camí cap al poble de RedWell. Tenim un misteri que resoldre!
+<<endif>>
+
+-> END

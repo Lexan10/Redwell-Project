@@ -1,0 +1,44 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ textstonetown
+RedWell Town - Un lloc tranquil per viure.
+HUNTER: No se si gaire tranquil, solitari segur que si...
+=> END"
+errors = [  ]
+titles = {
+"textstonetown": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textstonetown",
+"type": "title"
+},
+"1": {
+"character": "",
+"next_id": "2",
+"replacements": [  ],
+"text": "RedWell Town - Un lloc tranquil per viure.",
+"translation_key": "RedWell Town - Un lloc tranquil per viure.",
+"type": "dialogue"
+},
+"2": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "3",
+"replacements": [  ],
+"text": "No se si gaire tranquil, solitari segur que si...",
+"translation_key": "No se si gaire tranquil, solitari segur que si...",
+"type": "dialogue"
+},
+"3": {
+"next_id": "end",
+"type": "goto"
+}
+}

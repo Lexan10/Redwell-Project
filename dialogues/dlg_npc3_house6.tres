@@ -1,0 +1,146 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 11
+syntax_version = 2
+raw_text = "~ textnpc3house6
+if has_met_npc3_house2 == false
+	MARY: Aquesta sustancia es toxica, no toquis res!
+	MARY: Sembla alguna barreja de prodcutes quimics, pero no reconec quins...
+	HUNTER: Hauriem de portar-ho a analitzar, no?
+	MARY: Si, es el que hem de fer, pero tindrem els resultats en unes hores...
+	MARY: Vigila a la resta del poble, potser hi ha mes substancies desconegudes, Hunter!
+	HUNTER: Ja tinc compte, tu porta aixo a analitzar.
+	set has_met_npc3_house2 = true
+else:
+	MARY: Ara ho porto a analitzar, un moment que agafo mostres!
+=> END"
+errors = [  ]
+titles = {
+"textnpc3house6": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc3house6",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3_house2"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "9",
+"next_id": "2",
+"next_id_after": "11",
+"type": "condition"
+},
+"10": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "11",
+"parent_id": "9",
+"replacements": [  ],
+"text": "Ara ho porto a analitzar, un moment que agafo mostres!",
+"translation_key": "Ara ho porto a analitzar, un moment que agafo mostres!",
+"type": "dialogue"
+},
+"11": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aquesta sustancia es toxica, no toquis res!",
+"translation_key": "Aquesta sustancia es toxica, no toquis res!",
+"type": "dialogue"
+},
+"3": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "4",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Sembla alguna barreja de prodcutes quimics, pero no reconec quins...",
+"translation_key": "Sembla alguna barreja de prodcutes quimics, pero no reconec quins...",
+"type": "dialogue"
+},
+"4": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Hauriem de portar-ho a analitzar, no?",
+"translation_key": "Hauriem de portar-ho a analitzar, no?",
+"type": "dialogue"
+},
+"5": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Si, es el que hem de fer, pero tindrem els resultats en unes hores...",
+"translation_key": "Si, es el que hem de fer, pero tindrem els resultats en unes hores...",
+"type": "dialogue"
+},
+"6": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "7",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Vigila a la resta del poble, potser hi ha mes substancies desconegudes, Hunter!",
+"translation_key": "Vigila a la resta del poble, potser hi ha mes substancies desconegudes, Hunter!",
+"type": "dialogue"
+},
+"7": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "8",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Ja tinc compte, tu porta aixo a analitzar.",
+"translation_key": "Ja tinc compte, tu porta aixo a analitzar.",
+"type": "dialogue"
+},
+"8": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3_house2"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "11",
+"parent_id": "1",
+"type": "mutation"
+},
+"9": {
+"next_conditional_id": "11",
+"next_id": "10",
+"next_id_after": "11",
+"type": "condition"
+}
+}

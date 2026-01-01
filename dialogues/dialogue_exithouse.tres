@@ -1,0 +1,102 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 5
+syntax_version = 2
+raw_text = "~ textexit
+
+Vols sortir de la casa?
+- Si
+	set exit_house = true
+	=> END
+- No
+	set exit_house = false
+	=> END
+=> END"
+errors = [  ]
+titles = {
+"textexit": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "textexit",
+"type": "title"
+},
+"2": {
+"character": "",
+"next_id": "3",
+"replacements": [  ],
+"text": "Vols sortir de la casa?",
+"translation_key": "Vols sortir de la casa?",
+"type": "dialogue"
+},
+"3": {
+"next_id": "4",
+"next_id_after": "9",
+"replacements": [  ],
+"responses": PoolStringArray( "3", "6" ),
+"text": "Si",
+"translation_key": "Si",
+"type": "response"
+},
+"4": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "exit_house"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "5",
+"parent_id": "3",
+"type": "mutation"
+},
+"5": {
+"next_id": "end",
+"parent_id": "3",
+"type": "goto"
+},
+"6": {
+"next_id": "7",
+"next_id_after": "9",
+"replacements": [  ],
+"text": "No",
+"translation_key": "No",
+"type": "response"
+},
+"7": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "exit_house"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "8",
+"parent_id": "6",
+"type": "mutation"
+},
+"8": {
+"next_id": "end",
+"parent_id": "6",
+"type": "goto"
+},
+"9": {
+"next_id": "end",
+"type": "goto"
+}
+}

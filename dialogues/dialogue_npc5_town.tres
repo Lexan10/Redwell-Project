@@ -1,0 +1,91 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 8
+syntax_version = 2
+raw_text = "~ textnpc5
+if had_met_npc5_before == false
+	MIKE: Aquestes runes porten cremades un temps, volien fer un temple? Quina curiositat!
+	set had_met_npc5_before = true
+else
+	MIKE: En aquest poble es respira un aire estrany... Anem amb compte!
+=> END"
+errors = [  ]
+titles = {
+"textnpc5": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc5",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc5_before"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "4",
+"next_id": "2",
+"next_id_after": "6",
+"type": "condition"
+},
+"2": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aquestes runes porten cremades un temps, volien fer un temple? Quina curiositat!",
+"translation_key": "Aquestes runes porten cremades un temps, volien fer un temple? Quina curiositat!",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc5_before"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "6",
+"parent_id": "1",
+"type": "mutation"
+},
+"4": {
+"next_conditional_id": "6",
+"next_id": "5",
+"next_id_after": "6",
+"type": "condition"
+},
+"5": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "4",
+"replacements": [  ],
+"text": "En aquest poble es respira un aire estrany... Anem amb compte!",
+"translation_key": "En aquest poble es respira un aire estrany... Anem amb compte!",
+"type": "dialogue"
+},
+"6": {
+"next_id": "end",
+"type": "goto"
+}
+}

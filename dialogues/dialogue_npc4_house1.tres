@@ -1,0 +1,142 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 12
+syntax_version = 2
+raw_text = "~ textnpc4house1
+if has_met_npc4 == false
+	PETER: El rellotge estava aixi.
+	PETER: Ningu el va moure.
+	HUNTER: Aixi com?
+	PETER: Una agulla a esquerra. La petita, avançant.
+	set has_met_npc4 = true
+else:
+	%5 PETER: La llarga mirava cap a esquerra.
+	%5 PETER: La curta ja havia passat el quatre, pero no arribava al cinc.
+=> END"
+errors = [  ]
+titles = {
+"textnpc4house1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc4house1",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc4"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "7",
+"next_id": "2",
+"next_id_after": "10",
+"type": "condition"
+},
+"10": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "El rellotge estava aixi.",
+"translation_key": "El rellotge estava aixi.",
+"type": "dialogue"
+},
+"3": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "4",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Ningu el va moure.",
+"translation_key": "Ningu el va moure.",
+"type": "dialogue"
+},
+"4": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aixi com?",
+"translation_key": "Aixi com?",
+"type": "dialogue"
+},
+"5": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Una agulla a esquerra. La petita, avançant.",
+"translation_key": "Una agulla a esquerra. La petita, avançant.",
+"type": "dialogue"
+},
+"6": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc4"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "10",
+"parent_id": "1",
+"type": "mutation"
+},
+"7": {
+"next_conditional_id": "10",
+"next_id": "8",
+"next_id_after": "10",
+"type": "condition"
+},
+"8": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"siblings": [ {
+"id": "8",
+"weight": 5
+}, {
+"id": "9",
+"weight": 5
+} ],
+"text": "La llarga mirava cap a esquerra.",
+"translation_key": "La llarga mirava cap a esquerra.",
+"type": "dialogue"
+},
+"9": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"text": "La curta ja havia passat el quatre, pero no arribava al cinc.",
+"translation_key": "La curta ja havia passat el quatre, pero no arribava al cinc.",
+"type": "dialogue"
+}
+}

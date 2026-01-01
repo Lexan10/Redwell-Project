@@ -1,0 +1,92 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 24
+syntax_version = 2
+raw_text = "~ textnpc1
+if had_met_npc1_before == false
+	FRED: Benvingut a RedWell, Hunter. Hem d'entrar ja al poble, els companys ja hi son, no perdem el temps. Endavant!
+	set had_met_npc1_before = true
+else
+	FRED: Segueix el cami cap al poble de RedWell. Ens espera un misteri per resoldre!
+
+=> END"
+errors = [  ]
+titles = {
+"textnpc1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc1",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc1_before"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "4",
+"next_id": "2",
+"next_id_after": "7",
+"type": "condition"
+},
+"2": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Benvingut a RedWell, Hunter. Hem d'entrar ja al poble, els companys ja hi son, no perdem el temps. Endavant!",
+"translation_key": "Benvingut a RedWell, Hunter. Hem d'entrar ja al poble, els companys ja hi son, no perdem el temps. Endavant!",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc1_before"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "7",
+"parent_id": "1",
+"type": "mutation"
+},
+"4": {
+"next_conditional_id": "7",
+"next_id": "5",
+"next_id_after": "7",
+"type": "condition"
+},
+"5": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "7",
+"parent_id": "4",
+"replacements": [  ],
+"text": "Segueix el cami cap al poble de RedWell. Ens espera un misteri per resoldre!",
+"translation_key": "Segueix el cami cap al poble de RedWell. Ens espera un misteri per resoldre!",
+"type": "dialogue"
+},
+"7": {
+"next_id": "end",
+"type": "goto"
+}
+}

@@ -1,0 +1,153 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 19
+syntax_version = 2
+raw_text = "~ textnpc1house1
+if has_met_npc1 == false
+	FRED: El rellotge segueix intacte, ningu ha volgut tocar-lo des de llavors.
+	FRED: Aquest era el moment mes estrany del dia.
+	FRED: Despres de dinar, quan tot quedava en silenci.
+	HUNTER: La migdiada?
+	FRED: Exacte. Pero ja una mica tard.
+	set has_met_npc1 = true
+else:
+	%5 FRED: El rellotge sempre marcava aixo quan ja avançava cap al seguent numero.
+	%5 FRED: Recordo que el quatre ja havia quedat enrere, pero el cinc encara no havia arribat.
+=> END"
+errors = [  ]
+titles = {
+"textnpc1house1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc1house1",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc1"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "8",
+"next_id": "2",
+"next_id_after": "11",
+"type": "condition"
+},
+"10": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "11",
+"parent_id": "8",
+"replacements": [  ],
+"text": "Recordo que el quatre ja havia quedat enrere, pero el cinc encara no havia arribat.",
+"translation_key": "Recordo que el quatre ja havia quedat enrere, pero el cinc encara no havia arribat.",
+"type": "dialogue"
+},
+"11": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "El rellotge segueix intacte, ningu ha volgut tocar-lo des de llavors.",
+"translation_key": "El rellotge segueix intacte, ningu ha volgut tocar-lo des de llavors.",
+"type": "dialogue"
+},
+"3": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "4",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aquest era el moment mes estrany del dia.",
+"translation_key": "Aquest era el moment mes estrany del dia.",
+"type": "dialogue"
+},
+"4": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Despres de dinar, quan tot quedava en silenci.",
+"translation_key": "Despres de dinar, quan tot quedava en silenci.",
+"type": "dialogue"
+},
+"5": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "1",
+"replacements": [  ],
+"text": "La migdiada?",
+"translation_key": "La migdiada?",
+"type": "dialogue"
+},
+"6": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "7",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Exacte. Pero ja una mica tard.",
+"translation_key": "Exacte. Pero ja una mica tard.",
+"type": "dialogue"
+},
+"7": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "11",
+"parent_id": "1",
+"type": "mutation"
+},
+"8": {
+"next_conditional_id": "11",
+"next_id": "9",
+"next_id_after": "11",
+"type": "condition"
+},
+"9": {
+"character": "FRED",
+"character_replacements": [  ],
+"next_id": "11",
+"parent_id": "8",
+"replacements": [  ],
+"siblings": [ {
+"id": "9",
+"weight": 5
+}, {
+"id": "10",
+"weight": 5
+} ],
+"text": "El rellotge sempre marcava aixo quan ja avançava cap al seguent numero.",
+"translation_key": "El rellotge sempre marcava aixo quan ja avançava cap al seguent numero.",
+"type": "dialogue"
+}
+}

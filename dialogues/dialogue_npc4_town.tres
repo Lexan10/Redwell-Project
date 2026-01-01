@@ -1,0 +1,91 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 11
+syntax_version = 2
+raw_text = "~ textnpc4
+if had_met_npc4_before == false
+	PETER: Una mansio a la que no podem accedir... Necessitarem trobar la clau per obrir-la.
+	set had_met_npc4_before = true
+else
+	PETER: Investiguem algunes cases del voltant...
+=> END"
+errors = [  ]
+titles = {
+"textnpc4": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc4",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc4_before"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "4",
+"next_id": "2",
+"next_id_after": "6",
+"type": "condition"
+},
+"2": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Una mansio a la que no podem accedir... Necessitarem trobar la clau per obrir-la.",
+"translation_key": "Una mansio a la que no podem accedir... Necessitarem trobar la clau per obrir-la.",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc4_before"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "6",
+"parent_id": "1",
+"type": "mutation"
+},
+"4": {
+"next_conditional_id": "6",
+"next_id": "5",
+"next_id_after": "6",
+"type": "condition"
+},
+"5": {
+"character": "PETER",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "4",
+"replacements": [  ],
+"text": "Investiguem algunes cases del voltant...",
+"translation_key": "Investiguem algunes cases del voltant...",
+"type": "dialogue"
+},
+"6": {
+"next_id": "end",
+"type": "goto"
+}
+}

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 2
+syntax_version = 2
+raw_text = "~ dlg_note_putaway
+En Hunter guarda el paper. Per tornar-lo a llegir, prem la tecla 1.
+=> END"
+errors = [  ]
+titles = {
+"dlg_note_putaway": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "dlg_note_putaway",
+"type": "title"
+},
+"1": {
+"character": "",
+"next_id": "2",
+"replacements": [  ],
+"text": "En Hunter guarda el paper. Per tornar-lo a llegir, prem la tecla 1.",
+"translation_key": "En Hunter guarda el paper. Per tornar-lo a llegir, prem la tecla 1.",
+"type": "dialogue"
+},
+"2": {
+"next_id": "end",
+"type": "goto"
+}
+}

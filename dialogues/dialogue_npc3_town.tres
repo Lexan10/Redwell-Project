@@ -1,0 +1,91 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 15
+syntax_version = 2
+raw_text = "~ textnpc3
+if had_met_npc3_before == false
+	MARY: Aquest arbre no es normal, ha aparegut de sobte del terra i hi ha un liquid verd que no havia vist mai!
+	set had_met_npc3_before = true
+else
+	MARY: Agafare mostres per investigar-ho.
+=> END"
+errors = [  ]
+titles = {
+"textnpc3": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc3",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc3_before"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "4",
+"next_id": "2",
+"next_id_after": "6",
+"type": "condition"
+},
+"2": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aquest arbre no es normal, ha aparegut de sobte del terra i hi ha un liquid verd que no havia vist mai!",
+"translation_key": "Aquest arbre no es normal, ha aparegut de sobte del terra i hi ha un liquid verd que no havia vist mai!",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "had_met_npc3_before"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "6",
+"parent_id": "1",
+"type": "mutation"
+},
+"4": {
+"next_conditional_id": "6",
+"next_id": "5",
+"next_id_after": "6",
+"type": "condition"
+},
+"5": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "4",
+"replacements": [  ],
+"text": "Agafare mostres per investigar-ho.",
+"translation_key": "Agafare mostres per investigar-ho.",
+"type": "dialogue"
+},
+"6": {
+"next_id": "end",
+"type": "goto"
+}
+}

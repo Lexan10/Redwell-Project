@@ -1,0 +1,142 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 12
+syntax_version = 2
+raw_text = "~ textnpc3house1
+if has_met_npc3 == false
+	MARY: El rellotge no es va aturar per una avaria.
+	MARY: La posicio de les agulles es massa precisa.
+	HUNTER: Precisa en quin sentit?
+	MARY: No marcava una hora exacta, sino un instant entre dues.
+	set has_met_npc3 = true
+else:
+	%5 MARY: La petita ja havia superat el quatre, pero encara no tocava el cinc.
+	%5 MARY: La minutera no apuntava a cap numero, sino cap al lateral esquerre.
+=> END"
+errors = [  ]
+titles = {
+"textnpc3house1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc3house1",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "7",
+"next_id": "2",
+"next_id_after": "10",
+"type": "condition"
+},
+"10": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "El rellotge no es va aturar per una avaria.",
+"translation_key": "El rellotge no es va aturar per una avaria.",
+"type": "dialogue"
+},
+"3": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "4",
+"parent_id": "1",
+"replacements": [  ],
+"text": "La posicio de les agulles es massa precisa.",
+"translation_key": "La posicio de les agulles es massa precisa.",
+"type": "dialogue"
+},
+"4": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Precisa en quin sentit?",
+"translation_key": "Precisa en quin sentit?",
+"type": "dialogue"
+},
+"5": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "1",
+"replacements": [  ],
+"text": "No marcava una hora exacta, sino un instant entre dues.",
+"translation_key": "No marcava una hora exacta, sino un instant entre dues.",
+"type": "dialogue"
+},
+"6": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "10",
+"parent_id": "1",
+"type": "mutation"
+},
+"7": {
+"next_conditional_id": "10",
+"next_id": "8",
+"next_id_after": "10",
+"type": "condition"
+},
+"8": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"siblings": [ {
+"id": "8",
+"weight": 5
+}, {
+"id": "9",
+"weight": 5
+} ],
+"text": "La petita ja havia superat el quatre, pero encara no tocava el cinc.",
+"translation_key": "La petita ja havia superat el quatre, pero encara no tocava el cinc.",
+"type": "dialogue"
+},
+"9": {
+"character": "MARY",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"text": "La minutera no apuntava a cap numero, sino cap al lateral esquerre.",
+"translation_key": "La minutera no apuntava a cap numero, sino cap al lateral esquerre.",
+"type": "dialogue"
+}
+}

@@ -1,0 +1,374 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 25
+syntax_version = 2
+raw_text = "~ texthouse1
+Vols iniciar la primera investigacio?
+- Si
+	Quin company vols amb tu?
+	- Mary la cientifica
+		set selected_companion = \"cientifica\"
+		if has_met_npc3 == true
+			set has_met_npc3 = false
+		=> END
+	- Peter el musculs
+		set selected_companion = \"forcut\"
+		if has_met_npc4 == true
+			set has_met_npc4 = false
+		=> END
+	- Mike el tecnic
+		set selected_companion = \"tecnic\"
+		if has_met_npc5 == true
+			set has_met_npc5 = false
+		=> END
+	- Fred la meva ma dreta
+		set selected_companion = \"divertit\"
+		if has_met_npc1 == true
+			set has_met_npc1 = false
+		=> END
+	- Enrere
+		=> texthouse1
+- No 
+	=> END
+=> END"
+errors = [  ]
+titles = {
+"texthouse1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "texthouse1",
+"type": "title"
+},
+"1": {
+"character": "",
+"next_id": "2",
+"replacements": [  ],
+"text": "Vols iniciar la primera investigacio?",
+"translation_key": "Vols iniciar la primera investigacio?",
+"type": "dialogue"
+},
+"10": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "selected_companion"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "forcut"
+} ]
+},
+"next_id": "11",
+"parent_id": "9",
+"type": "mutation"
+},
+"11": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc4"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_conditional_id": "13",
+"next_id": "12",
+"next_id_after": "13",
+"parent_id": "9",
+"type": "condition"
+},
+"12": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc4"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "13",
+"parent_id": "11",
+"type": "mutation"
+},
+"13": {
+"next_id": "end",
+"parent_id": "9",
+"type": "goto"
+},
+"14": {
+"next_id": "15",
+"next_id_after": "28",
+"parent_id": "2",
+"replacements": [  ],
+"text": "Mike el tecnic",
+"translation_key": "Mike el tecnic",
+"type": "response"
+},
+"15": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "selected_companion"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "tecnic"
+} ]
+},
+"next_id": "16",
+"parent_id": "14",
+"type": "mutation"
+},
+"16": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc5"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_conditional_id": "18",
+"next_id": "17",
+"next_id_after": "18",
+"parent_id": "14",
+"type": "condition"
+},
+"17": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc5"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "18",
+"parent_id": "16",
+"type": "mutation"
+},
+"18": {
+"next_id": "end",
+"parent_id": "14",
+"type": "goto"
+},
+"19": {
+"next_id": "20",
+"next_id_after": "28",
+"parent_id": "2",
+"replacements": [  ],
+"text": "Fred la meva ma dreta",
+"translation_key": "Fred la meva ma dreta",
+"type": "response"
+},
+"2": {
+"next_id": "3",
+"next_id_after": "28",
+"replacements": [  ],
+"responses": PoolStringArray( "2", "26" ),
+"text": "Si",
+"translation_key": "Si",
+"type": "response"
+},
+"20": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "selected_companion"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "divertit"
+} ]
+},
+"next_id": "21",
+"parent_id": "19",
+"type": "mutation"
+},
+"21": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc1"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_conditional_id": "23",
+"next_id": "22",
+"next_id_after": "23",
+"parent_id": "19",
+"type": "condition"
+},
+"22": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "23",
+"parent_id": "21",
+"type": "mutation"
+},
+"23": {
+"next_id": "end",
+"parent_id": "19",
+"type": "goto"
+},
+"24": {
+"next_id": "25",
+"next_id_after": "28",
+"parent_id": "2",
+"replacements": [  ],
+"text": "Enrere",
+"translation_key": "Enrere",
+"type": "response"
+},
+"25": {
+"next_id": "1",
+"parent_id": "24",
+"type": "goto"
+},
+"26": {
+"next_id": "27",
+"next_id_after": "28",
+"replacements": [  ],
+"text": "No",
+"translation_key": "No",
+"type": "response"
+},
+"27": {
+"next_id": "end",
+"parent_id": "26",
+"type": "goto"
+},
+"28": {
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "",
+"next_id": "4",
+"parent_id": "2",
+"replacements": [  ],
+"text": "Quin company vols amb tu?",
+"translation_key": "Quin company vols amb tu?",
+"type": "dialogue"
+},
+"4": {
+"next_id": "5",
+"next_id_after": "28",
+"parent_id": "2",
+"replacements": [  ],
+"responses": PoolStringArray( "4", "9", "14", "19", "24" ),
+"text": "Mary la cientifica",
+"translation_key": "Mary la cientifica",
+"type": "response"
+},
+"5": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "selected_companion"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "cientifica"
+} ]
+},
+"next_id": "6",
+"parent_id": "4",
+"type": "mutation"
+},
+"6": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_conditional_id": "8",
+"next_id": "7",
+"next_id_after": "8",
+"parent_id": "4",
+"type": "condition"
+},
+"7": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc3"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "8",
+"parent_id": "6",
+"type": "mutation"
+},
+"8": {
+"next_id": "end",
+"parent_id": "4",
+"type": "goto"
+},
+"9": {
+"next_id": "10",
+"next_id_after": "28",
+"parent_id": "2",
+"replacements": [  ],
+"text": "Peter el musculs",
+"translation_key": "Peter el musculs",
+"type": "response"
+}
+}

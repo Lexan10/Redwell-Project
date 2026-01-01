@@ -1,0 +1,142 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 16
+syntax_version = 2
+raw_text = "~ textnpc5house1
+if has_met_npc5 == false
+	MIKE: Aquest rellotge funcionava correctament.
+	MIKE: Si es va quedar aixi, algu el va deixar aixi.
+	HUNTER: I que marcava?
+	MIKE: El tercer quart.
+	set has_met_npc5 = true
+else:
+	%5 MIKE: Quan la minutera apunta a esquerra, vol dir que ja ha passat el tercer quart.
+	%5 MIKE: En aquell moment, la petita ja avança cap al seguent numero.
+=> END"
+errors = [  ]
+titles = {
+"textnpc5house1": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc5house1",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc5"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "7",
+"next_id": "2",
+"next_id_after": "10",
+"type": "condition"
+},
+"10": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aquest rellotge funcionava correctament.",
+"translation_key": "Aquest rellotge funcionava correctament.",
+"type": "dialogue"
+},
+"3": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "4",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Si es va quedar aixi, algu el va deixar aixi.",
+"translation_key": "Si es va quedar aixi, algu el va deixar aixi.",
+"type": "dialogue"
+},
+"4": {
+"character": "HUNTER",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "1",
+"replacements": [  ],
+"text": "I que marcava?",
+"translation_key": "I que marcava?",
+"type": "dialogue"
+},
+"5": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "1",
+"replacements": [  ],
+"text": "El tercer quart.",
+"translation_key": "El tercer quart.",
+"type": "dialogue"
+},
+"6": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc5"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "10",
+"parent_id": "1",
+"type": "mutation"
+},
+"7": {
+"next_conditional_id": "10",
+"next_id": "8",
+"next_id_after": "10",
+"type": "condition"
+},
+"8": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"siblings": [ {
+"id": "8",
+"weight": 5
+}, {
+"id": "9",
+"weight": 5
+} ],
+"text": "Quan la minutera apunta a esquerra, vol dir que ja ha passat el tercer quart.",
+"translation_key": "Quan la minutera apunta a esquerra, vol dir que ja ha passat el tercer quart.",
+"type": "dialogue"
+},
+"9": {
+"character": "MIKE",
+"character_replacements": [  ],
+"next_id": "10",
+"parent_id": "7",
+"replacements": [  ],
+"text": "En aquell moment, la petita ja avança cap al seguent numero.",
+"translation_key": "En aquell moment, la petita ja avança cap al seguent numero.",
+"type": "dialogue"
+}
+}

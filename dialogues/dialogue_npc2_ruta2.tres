@@ -1,0 +1,91 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 20
+syntax_version = 2
+raw_text = "~ textnpc2
+if has_met_npc2 == false
+	JOHN: Aqui ha passat alguna cosa... poc agradable...
+	set has_met_npc2 = true
+else
+	JOHN: Pobre gent...
+=> END"
+errors = [  ]
+titles = {
+"textnpc2": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "textnpc2",
+"type": "title"
+},
+"1": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc2"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "4",
+"next_id": "2",
+"next_id_after": "6",
+"type": "condition"
+},
+"2": {
+"character": "JOHN",
+"character_replacements": [  ],
+"next_id": "3",
+"parent_id": "1",
+"replacements": [  ],
+"text": "Aqui ha passat alguna cosa... poc agradable...",
+"translation_key": "Aqui ha passat alguna cosa... poc agradable...",
+"type": "dialogue"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_npc2"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "6",
+"parent_id": "1",
+"type": "mutation"
+},
+"4": {
+"next_conditional_id": "6",
+"next_id": "5",
+"next_id_after": "6",
+"type": "condition"
+},
+"5": {
+"character": "JOHN",
+"character_replacements": [  ],
+"next_id": "6",
+"parent_id": "4",
+"replacements": [  ],
+"text": "Pobre gent...",
+"translation_key": "Pobre gent...",
+"type": "dialogue"
+},
+"6": {
+"next_id": "end",
+"type": "goto"
+}
+}

@@ -1,0 +1,116 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 5
+syntax_version = 2
+raw_text = "~ return_start
+Vols tornar a entrar a la casa del rellotge?
+- Si
+	set return_yes = true
+	=> END
+- No
+	set return_yes = false
+	=> END
+- Enrere
+	=> return_start
+=> END"
+errors = [  ]
+titles = {
+"return_start": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "return_start",
+"type": "title"
+},
+"1": {
+"character": "",
+"next_id": "2",
+"replacements": [  ],
+"text": "Vols tornar a entrar a la casa del rellotge?",
+"translation_key": "Vols tornar a entrar a la casa del rellotge?",
+"type": "dialogue"
+},
+"10": {
+"next_id": "end",
+"type": "goto"
+},
+"2": {
+"next_id": "3",
+"next_id_after": "10",
+"replacements": [  ],
+"responses": PoolStringArray( "2", "5", "8" ),
+"text": "Si",
+"translation_key": "Si",
+"type": "response"
+},
+"3": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "return_yes"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "4",
+"parent_id": "2",
+"type": "mutation"
+},
+"4": {
+"next_id": "end",
+"parent_id": "2",
+"type": "goto"
+},
+"5": {
+"next_id": "6",
+"next_id_after": "10",
+"replacements": [  ],
+"text": "No",
+"translation_key": "No",
+"type": "response"
+},
+"6": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "return_yes"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_id": "7",
+"parent_id": "5",
+"type": "mutation"
+},
+"7": {
+"next_id": "end",
+"parent_id": "5",
+"type": "goto"
+},
+"8": {
+"next_id": "9",
+"next_id_after": "10",
+"replacements": [  ],
+"text": "Enrere",
+"translation_key": "Enrere",
+"type": "response"
+},
+"9": {
+"next_id": "1",
+"parent_id": "8",
+"type": "goto"
+}
+}
